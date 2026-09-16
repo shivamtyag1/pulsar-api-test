@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+
+# Never commit extracted client data or schema dumps
+out/
+schema/
+
+# Never commit credentials
+.env
+*.token
