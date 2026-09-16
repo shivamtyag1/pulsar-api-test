@@ -1,11 +1,8 @@
-# Pulsar API — POC
+# Pulsar API - POC
 
 A four-step spike to find out how the Pulsar API actually behaves before we
-commit to building anything. Runs locally. **No Lambda, no Snowpipe, no dbt,
-no Terraform** — none of that proves the data is useful, and all of it is
+commit to building anything. Runs locally. **No Lambda, no Snowpipe** — none of that proves the data is useful, and all of it is
 expensive to unpick if the answers here change the design.
-
-Companion to the full study (`../pulsar-api-study.html`).
 
 ## What this is trying to find out
 
