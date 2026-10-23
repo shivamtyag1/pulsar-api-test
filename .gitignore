@@ -1,11 +1,53 @@
-.venv/
-__pycache__/
-*.pyc
-
-# Never commit extracted client data or schema dumps
+# --- Client data. Never commit. ---------------------------------------
+# Extracted mentions are client-confidential and subject to client Walls.
 out/
-schema/
+*.jsonl
+*.jsonl.gz
+*.csv
+!tests/**/*.csv
 
-# Never commit credentials
+# Introspected vendor schema dumps. The code READS these at run time (the
+# mention field list and the breakdown catalogue come from trac_data.json), so
+# a fresh clone cannot run without them: they are tracked. The other dumps are
+# unused and stay ignored; refresh with `make introspect`.
+schema/*
+!schema/trac_data.json
+!schema/trac_meta.json
+
+# --- Credentials. Never commit. ---------------------------------------
 .env
+.env.*
+!.env.example
 *.token
+*.pem
+*.p8
+*.key
+credentials*
+secrets*
+
+# --- Python -----------------------------------------------------------
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# --- Infrastructure ---------------------------------------------------
+.terraform/
+*.tfstate
+*.tfstate.*
+cdk.out/
+
+# --- Editor / OS ------------------------------------------------------
+.DS_Store
+.idea/
+.vscode/
+*.swp

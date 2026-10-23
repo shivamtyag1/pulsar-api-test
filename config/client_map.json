@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "clients": {
+    "lovesac": {
+      "agency": "VM",
+      "search_ids": ["224320"]
+    },
+    "perdue": {
+      "agency": "VM",
+      "folder": "920"
+    },
+    "raisin-bran": {
+      "agency": "VM",
+      "search_ids": ["176652"]
+    }
+  }
+}
